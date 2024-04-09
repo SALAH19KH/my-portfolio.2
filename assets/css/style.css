@@ -1,0 +1,234 @@
+@import "../vendor/bootstrap/css/bootstrap.min.css";
+@import "../vendor/font-awesome/css/all.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&amp;display=swap");
+
+:root {
+  --px-theme:	#3a86ff;
+  --px-theme-text:	#fff;
+  
+  --px-bg:	#fff;
+  --px-text:	#444746;
+
+
+  --px-gray-1:	#f8fafd;
+  --px-gray-2:	#f3f6fc;
+  --px-gray-3:	#eff3fa;
+  --px-gray-4:	#edf2fa;
+  --px-gray-5:	#eaf0f9;
+
+  
+  --bs-heading-color:	#000;
+  --px-border:	#e1e3e1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: inherit;
+  }
+}
+img {
+  max-width: 100%;
+}
+
+* {
+  outline: none !important;
+}
+
+body {
+  background-color: var(--px-bg);
+  color: var(--px-text);
+  font-family: "Rubik", sans-serif;
+  --bs-body-font-weight: 400;
+  --bs-body-font-size: 1rem;
+  --bs-body-line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.home-section-03 {
+  overflow: hidden;
+  position: relative;
+}
+.home-section-03 .home-image .home-image-in {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 12px solid var(--px-gray-3);
+  box-shadow: 0 0 0 12px var(--px-gray-1);
+}
+.home-section-03 .home-image .home-image-in img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.home-section-03 .home-intro {
+  text-align: center;
+  padding-top: 20px;
+}
+.home-section-03 .home-intro h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.home-section-03 .home-intro h2 {
+  font-weight: 500;
+  margin: 0px;
+  font-size: 22px;
+}
+.home-section-03 .social-link {
+  padding: 20px 0 0;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+.home-section-03 .social-link li {
+  margin: 0 4px;
+}
+.home-section-03 .social-link a {
+  width: 40px;
+  height: 40px;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  background: var(--px-theme);
+  border: 2px solid var(--px-theme);
+  color: var(--px-theme-text);
+  border-radius: 10px;
+  transition: ease all 0.35s;
+}
+.home-section-03 .social-link a:hover {
+  background: var(--px-theme-text);
+  color: var(--px-theme);
+}
+
+.bg-effect-img {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
+  pointer-events: none;
+  -webkit-animation: background_effect 0.2s infinite;
+          animation: background_effect 0.2s infinite;
+  opacity: 0.2;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+.bg-effect-img .marquee {
+  -webkit-animation: marquee 8s linear infinite;
+          animation: marquee 8s linear infinite;
+  position: absolute;
+  white-space: nowrap;
+  display: -ms-flexbox;
+  display: flex;
+}
+.bg-effect-img h2 {
+  font-size: 12vw;
+  text-transform: uppercase;
+  /* opacity: 0.1; */
+  margin: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+
+@-webkit-keyframes background_effect {
+  0% {
+    background-position: 0 0;
+  }
+  10% {
+    background-position: -5% -5%;
+  }
+  20% {
+    background-position: -10% 5%;
+  }
+  30% {
+    background-position: 5% -10%;
+  }
+  40% {
+    background-position: -5% 15%;
+  }
+  50% {
+    background-position: -10% 5%;
+  }
+  60% {
+    background-position: 15% 0;
+  }
+  70% {
+    background-position: 0 10%;
+  }
+  80% {
+    background-position: -15% 0;
+  }
+  90% {
+    background-position: 10% 5%;
+  }
+  to {
+    background-position: 5% 0;
+  }
+}
+
+@keyframes background_effect {
+  0% {
+    background-position: 0 0;
+  }
+  10% {
+    background-position: -5% -5%;
+  }
+  20% {
+    background-position: -10% 5%;
+  }
+  30% {
+    background-position: 5% -10%;
+  }
+  40% {
+    background-position: -5% 15%;
+  }
+  50% {
+    background-position: -10% 5%;
+  }
+  60% {
+    background-position: 15% 0;
+  }
+  70% {
+    background-position: 0 10%;
+  }
+  80% {
+    background-position: -15% 0;
+  }
+  90% {
+    background-position: 10% 5%;
+  }
+  to {
+    background-position: 5% 0;
+  }
+}
+@-webkit-keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
